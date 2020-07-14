@@ -11,6 +11,7 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
+	"github.com/heroku/go-getting-started/controllers"
 	_ "github.com/heroku/x/hmetrics/onload"
 	_ "github.com/lib/pq"
 	"github.com/russross/blackfriday"
@@ -93,6 +94,9 @@ func main() {
 	router.GET("/repeat", repeatHandler(repeat))
 
 	router.GET("/db", dbFunc(db))
+
+	router.GET("/new", controllers.NewTranscript)
+	router.GET("/list", controllers.ShowList)
 
 	router.Run(":" + port)
 }

@@ -15,6 +15,8 @@ github.com/manucorporat/sse
 github.com/mattn/go-colorable
 # github.com/mattn/go-isatty v0.0.0-20150814002629-7fcbc72f853b
 github.com/mattn/go-isatty
+# github.com/pkg/errors v0.9.1
+github.com/pkg/errors
 # github.com/russross/blackfriday v2.0.0+incompatible
 github.com/russross/blackfriday
 # github.com/shurcooL/sanitized_anchor_name v1.0.0
