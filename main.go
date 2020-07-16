@@ -10,6 +10,7 @@ import (
 	"strconv"
 	"time"
 
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	"github.com/heroku/go-getting-started/controllers"
 	_ "github.com/heroku/x/hmetrics/onload"
@@ -98,5 +99,6 @@ func main() {
 	router.GET("/new", controllers.NewTranscript)
 	router.GET("/list", controllers.ShowList)
 
+	router.Use(cors.Default())
 	router.Run(":" + port)
 }
