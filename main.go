@@ -83,6 +83,8 @@ func main() {
 
 	router := gin.New()
 	router.Use(gin.Logger())
+	router.Use(cors.Default())
+
 	router.LoadHTMLGlob("templates/*.tmpl.html")
 	router.Static("/static", "static")
 
@@ -99,6 +101,5 @@ func main() {
 	router.GET("/new", controllers.NewTranscript)
 	router.GET("/list", controllers.ShowList)
 
-	router.Use(cors.Default())
 	router.Run(":" + port)
 }
